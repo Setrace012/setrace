@@ -8,17 +8,15 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
+            background-color: rgba(26, 26, 26, 0.9);
             color: #f2f2f2;
             background-image: url('https://pbs.twimg.com/media/DIJI4LeXcAACAIU.jpg');
             background-size: cover;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
             background-position: center;
         }
 
         header {
-            background-color: rgba(13, 13, 13, 0.8);
+            background-color: #0d0d0d;
             padding: 20px;
             text-align: center;
         }
@@ -39,9 +37,6 @@
         .content {
             padding: 20px;
             text-align: center;
-            background-color: rgba(26, 26, 26, 0.85);
-            margin: 20px;
-            border-radius: 8px;
         }
 
         .content h2 {
@@ -56,14 +51,14 @@
             margin-bottom: 40px;
         }
 
-        .games, .players, .social-media {
+        .games, .players {
             padding: 20px;
-            background-color: rgba(41, 41, 41, 0.85);
-            margin: 20px;
+            background-color: rgba(41, 41, 41, 0.9);
             border-radius: 8px;
+            margin-bottom: 20px;
         }
 
-        .games h2, .players h2, .social-media h2 {
+        .games h2, .players h2 {
             color: #f2f2f2;
             font-size: 24px;
             margin-bottom: 20px;
@@ -94,11 +89,6 @@
             font-size: 16px;
         }
 
-        .game-list li a {
-            color: #b300b3;
-            text-decoration: none;
-        }
-
         .back-button {
             background-color: #b300b3;
             color: #f2f2f2;
@@ -111,18 +101,20 @@
         }
 
         footer {
-            background-color: rgba(13, 13, 13, 0.8);
+            background-color: #0d0d0d;
             padding: 10px;
             text-align: center;
             color: #f2f2f2;
             font-size: 14px;
         }
 
-        .social-media a {
+        a {
             color: #b300b3;
             text-decoration: none;
-            font-size: 18px;
-            margin-right: 15px;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
     <script>
@@ -135,7 +127,7 @@
 
             let players = [];
 
-            if (game === 'farlight84') {
+            if (game === 'bloodstrike') {
                 players = ['Teteu', 'Ghost', 'Davizots'];
             } else if (game === 'valorant' || game === 'lol') {
                 players = ['Nenhum jogador cadastrado'];
@@ -173,8 +165,8 @@
     <div class="games">
         <h2>Jogadores</h2>
         <ul class="game-list">
-            <li onclick="showPlayers('farlight84')">
-                <h3>Farlight 84</h3>
+            <li onclick="showPlayers('bloodstrike')">
+                <h3>Blood Strike</h3>
                 <p>Jogadores cadastrados</p>
             </li>
             <li onclick="showPlayers('valorant')">
@@ -198,16 +190,8 @@
         <h2>Próximos Jogos</h2>
         <ul class="game-list">
             <li>
-                <h3>Farlight 84 - Torneio Internacional</h3>
-                <p>Data: 24 de Agosto, 2024</p>
-                <p>Hora: 14:00</p>
-                <p>Transmissão: <a href="https://www.youtube.com/@Setrace" target="_blank">YouTube</a></p>
-            </li>
-            <li>
-                <h3>Farlight 84 - Torneio Internacional</h3>
-                <p>Data: 7 de Setembro, 2024</p>
-                <p>Hora: 14:00</p>
-                <p>Transmissão: <a href="https://www.youtube.com/@Setrace" target="_blank">YouTube</a></p>
+                <h3>Blood Strike</h3>
+                <p>Nenhum evento programado</p>
             </li>
             <li>
                 <h3>Valorant</h3>
@@ -220,9 +204,19 @@
         </ul>
     </div>
 
-    <div class="social-media">
+    <div class="games">
         <h2>Redes Sociais</h2>
-        <p><a href="https://www.youtube.com/@Setrace" target="_blank">YouTube</a> | <a href="https://www.instagram.com/setrace012/" target="_blank">Instagram</a> | <a href="https://discord.com/invite/Qmp593J446" target="_blank">Discord</a></p>
+        <ul class="game-list">
+            <li>
+                <p><a href="https://www.youtube.com/@Setrace" target="_blank">YouTube</a></p>
+            </li>
+            <li>
+                <p><a href="https://www.instagram.com/setrace012/" target="_blank">Instagram</a></p>
+            </li>
+            <li>
+                <p><a href="https://discord.com/invite/Qmp593J446" target="_blank">Discord</a></p>
+            </li>
+        </ul>
     </div>
 
     <footer>
